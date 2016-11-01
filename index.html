@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <!-- @start wf_head -->
+    <title>Getting Started with Crate on Windows | Crate.IO</title>
+    <meta content="crate database db distributed cloud docker download" name=
+    "keywords">
+    <meta name="description" content=
+    "Download Crate. Easily install Crate in the cloud, docker, *nix and OSX. Works with Java, Python, Ruby, PHP, Node.js, erlang, Mono, Golang, and dbext">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="Getting Started with Crate on Windows" property="og:title">
+    <meta content="" property="og:description">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/webflow.css" rel="stylesheet" type="text/css">
+    <link href="css/crateio.css" rel="stylesheet" type="text/css">
+    <link href="css/crateio-rtd.css" rel="stylesheet" type="text/css">
+    <link href="css/friendly-codehilite.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery.min.js" type="text/javascript">
+    </script>
+    <script src="js/modernizr.js" type="text/javascript">
+    </script>
+    <link href="img/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- @end wf_head -->
+</head>
+<body>
+    <!-- @start wf_header -->
+    <header class="w-section">
+        <div class="w-container">
+            <div class="w-nav navbar" data-animation="default" data-collapse=
+            "small" data-contain="1" data-duration="400">
+                <div class="w-container">
+                    <a class="w-nav-brand brand" href=
+                    "https://crate.io/"><img src="img/logo-crate.png" width=
+                    "217"></a>
+                    <nav class="w-nav-menu" role="navigation">
+                        <a class="w-nav-link navlink" href=
+                        "https://crate.io/overview" style=
+                        "max-width: 940px;">Overview</a> <a class=
+                        "w-nav-link navlink" href="https://crate.io/blog"
+                        style="max-width: 940px;">Blog</a> <a class=
+                        "w-nav-link navlink" href="https://crate.io/use-cases"
+                        style="max-width: 940px;">Use Cases</a> <a class=
+                        "w-nav-link navlink" href="https://crate.io/docs/"
+                        style="max-width: 940px;">Documentation</a> <a class=
+                        "w-nav-link navlink" href="https://crate.io/download/"
+                        style="max-width: 940px;">Download</a> <a class=
+                        "w-clearfix w-inline-block navlink search" href=
+                        "https://crate.io/search" id="image-search"><img class=
+                        "image search" src="img/icon-search@2x.png" width=
+                        "18"></a>
+                    </nav>
+                    <div class="w-nav-button">
+                        <div class="w-icon-nav-menu"></div>
+                    </div>
+                </div>
+                <div class="w-nav-overlay" data-wf-ignore=""></div>
+            </div>
+        </div>
+    </header><!-- @end wf_header -->
+    <!-- @start content -->
+    <div class="w-section section border-top">
+        <div class="w-container w-hidden-main margin-bottom-32">
+            <div class="section" style="margin: 0px">
+                <a class="w-button" href="#" id="mobile-menu-toggler">Toggle
+                Doc Menu</a>
+            </div>
+        </div>
+        <div class="w-container container">
+            <div class="wrapper-navleft">
+                <div class=
+                "bs-docs-sidebar bs-docs-sidenav hidden-print affix-top" id=
+                "nav-affix" role="complementary" style="width: 242px;">
+                    <ul class="bs-sidenav nav toctree" id="nav" role=
+                    "complementary">
+                        <li class="navleft-item">
+                            <a class="link-active" href=
+                            "https://crate.io/download/">Getting Started</a>
+                            <ul class="w-list-unstyled navleft-list-level">
+                                <li class="navleft-item">
+                                    <a class="link-active" href=
+                                    "https://crate.io/docs/install/local/">Local</a>
+                                    <ul class=
+                                    "w-list-unstyled navleft-list-level">
+                                        <li class="navleft-item">
+                                            <a href=
+                                            "https://crate.io/docs/install/local/linux/">
+                                            Linux</a>
+                                        </li>
+                                        <li class="navleft-item">
+                                            <a href=
+                                            "https://crate.io/docs/install/local/mac/">
+                                            Mac</a>
+                                        </li>
+                                        <li class="navleft-item">
+                                            <a class="w--current link-active"
+                                            href=
+                                            "https://crate.io/docs/install/local/windows/">
+                                            Windows</a>
+                                        </li>
+                                        <li class="navleft-item">
+                                            <a href=
+                                            "https://crate.io/docs/install/local/tarball/">
+                                            Tarball</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="navleft-item">
+                                    <a href=
+                                    "https://crate.io/docs/install/containers/">
+                                    Containers</a>
+                                </li>
+                                <li class="navleft-item">
+                                    <a href=
+                                    "https://crate.io/docs/install/cloud/">Cloud</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navleft-item">
+                            <a href="https://crate.io/docs/connect/">Connect to
+                            Cluster</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href="https://crate.io/docs/import/">Import
+                            Data</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href="https://crate.io/docs/clients/">Client
+                            Libraries</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href="https://crate.io/docs/scale/">Scale a
+                            Cluster</a>
+                        </li>
+                        <li class="navleft-item border-top">
+                            <a href=
+                            "https://crate.io/docs/reference/overview/">Reference</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href=
+                            "https://github.com/crate/crate-sample-apps">Sample
+                            Applications</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href="https://crate.io/docs/tools/">Tools</a>
+                        </li>
+                        <li class="navleft-item">
+                            <a href=
+                            "https://crate.io/docs/support/">Support</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrapper-content-right">
+                <h1>Getting Started with Crate on Windows</h1>
+                <div>
+                    <p>First time with Crate? Learn how to install it on
+                    Windows systems, run the <a href="https://crate.io/docs/connect/admin_ui/">Admin UI</a> and execute your first
+                    query.</p>
+                    <p><span class="admonition seealso"><span class=
+                    "first admonition-title">System requirements</span>
+                    <span>Windows 7/8/10 versions are supported.<br><br>
+                    To install Crate on Windows, you will need a <a class="inline" href=
+                    "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">
+                    Java JDK</a> (version 8u111+) installed.</span></span></p>                  
+                    <h2>Configure Windows</h2>
+                    <p>Set the <code>JAVA_HOME</code> environment variable:</p>
+                    <ol class="mt-minus">
+                        <li>On the Start menu, right click Computer and
+                        select Properties.</li>
+                        <li>At the left panel, click Advanced system
+                        settings.</li>
+                        <li>Go to the Advanced tab and click the Environment
+                        Variables button….</li>
+                        <li>Under System variables, click New….</li>
+                        <li>In the Variable name field, type <code>JAVA_HOME</code>.</li>
+                        <li>In the Variable value field, specify a path to the
+                        installed Java JDK folder and then click OK.</li>
+                    </ol>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice</span> <span>Click the image below to go through all the steps.</span></span></p>
+                    <p class="changeimg">
+                        <img alt="" src="img/java_1.png">
+                        <img alt="" src="img/java_2.png">
+                        <img alt="" src="img/java_3.png">
+                        <img alt="" src="img/java_4.png">
+                        <img alt="" src="img/java_5.png">
+                    </p>
+                    <p>Specify the Crate ports through the Windows Firewall:</p>
+                    <ol class="mt-minus">
+                        <li>On the Start menu, click Control Panel &gt; System
+                        and Security &gt; Windows Firewall &gt; Advanced settings.</li>
+                        <li>In the left pane of the Windows Firewall with Advanced Security, click Inbound Rules, and then the
+                        right pane, click New Rule.</li>
+                        <li>In the Rule Type window, select Port and then click
+                        Next.</li>
+                        <li>In the Protocol and Ports window, select TCP, then
+                        specify Specific local ports: <code>4200</code>, <code>4300</code>, and then
+                        click Next.</li>
+                        <li>Leave the default settings in the Action and
+                        Profile windows.</li>
+                        <li>In the Name window, specify Name: <code>Crate</code> and click Finish.</li>
+                    </ol>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice</span> <span>Click the image below to go through all the steps.</span></span></p>
+                    <p class="changeimg">
+                        <img alt="" src="img/port_1.png">
+                        <img alt="" src="img/port_2.png">
+                        <img alt="" src="img/port_3.png">
+                        <img alt="" src="img/port_4.png">
+                        <img alt="" src="img/port_5.png">
+                        <img alt="" src="img/port_6.png">
+                        <img alt="" src="img/port_7.png">
+                        <img alt="" src="img/port_8.png">
+                        <img alt="" src="img/port_9.png">
+                    </p>
+                    <h2>Install Crate</h2>
+                    <p>Download the <a href="https://crate.io/docs/install/local/tarball/">Crate Tarball</a>, expand it and move to a
+                    convenient location.</p>
+                    <p>Start Crate by running <code>.\bin\crate.</code></p>
+                    <p><img alt="" src="img/run.png"></p>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice:</span> <span>To create a
+                    cluster, run the command multiple times.</span></span></p>
+                    <h2>Connect to Cluster via Admin UI</h2>
+                    <p>Crate ships with an <a href="https://crate.io/docs/connect/admin_ui/">Admin UI</a> that
+                    provides an overview of your cluster, nodes, tables and
+                    much more.</p>
+                    <p>To Connect to Crate Cluster, insert the following url to your address bar:</p>
+                    <p><code>http://127.0.0.1:4200/admin</code></p>
+                    <p>(where <code>127.0.0.1</code> is a <code>SERVER_IP</code>, the publicly accessible
+                    IP address of any node in the Crate cluster, and <code>4200</code> is
+                    the Crate port).</p>
+                    <p><a href="img/admin_ui.png"><img alt="" src="img/admin_ui_sm.png"></a></p>
+                    <h2>Get started with sample data</h2>
+                    <p>In the Admin UI, go to the Get Started tab and proceed with the
+                    instructions. As a result you will get a <strong>tweets</strong> table with
+                    the latest posts imported from Twitter. It is accessible in
+                    the Tables tab.</p>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice</span> <span>Click the image below to go through all the steps.</span></span></p>
+                    <p class="changeimg">
+                        <img alt="" src="img/start_1.png">
+                        <img alt="" src="img/start_2.png">
+                        <img alt="" src="img/start_3.png">
+                    </p>
+                    <p>Now, lets make some queries.</p>
+                    <p>Go to the Console tab and type:</p>
+                    <div class="codehilite">
+                        <pre><code><span class="k">SELECT</span> <span class=
+                        "k">text </span><span class="k">FROM</span> <span class=
+                        "n">tweets</span> <span class=
+                        "k">LIMIT</span> <span class="mi">100</span><span class=
+                        "p">;</span>
+</code></pre>
+                    </div>
+                    <p>Click Execute query.</p>
+                    <p>If the query was written correctly, the operation was
+                    successful, and the SELECT OK message will be displayed.
+                    The resulting table will be displayed in the field below.</p>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice</span> <span>Click the image below to go through all the steps.</span></span></p>
+                    <p class="changeimg">
+                        <img alt="" src="img/query_1.png">
+                        <img alt="" src="img/query_2.png">
+                    </p>
+                    <p>Lets try another example. Here you will get a
+                    total number of obtained tweets as well as the number of
+                    users that were verified.</p>
+                    <p>In the Console tab, type:</p>
+                    <div class="codehilite">
+                        <pre><code> <span class="k">SELECT</span> <span class=
+                        "k">count</span><span class="n">(*)</span> <span class="k">AS</span> <span class=
+                        "n">quantity,<br> <span class="k">user</span>[<span class="s1">'verified'</span>]</span> <br> <span class="k">FROM</span> <span class=
+                        "n">tweets</span> <br> <span class="k">GROUP BY</span> <span class="n">user</span>[<span class="s1">'verified'</span>]</span> <br> <span class="k">ORDER BY</span> <span class="n">quantity</span> <span class="k">DESC</span><span class=
+                        "p">;</span>
+</code></pre>
+                    </div>
+                    <p>Click Execute query.</p>
+                    <p><span class="admonition note"><span class=
+                    "first admonition-title">Notice</span> <span>Click the image below to go through all the steps.</span></span></p>
+                    <p class="changeimg">
+                        <img alt="" src="img/verified_1.png">
+                        <img alt="" src="img/verified_2.png">
+                    </p>
+                    <p>This query counts the number of verified and non-verified twitter users and displays the quantity by each type. count(*) is an aggregation function that returns a count of all the rows that match the query. The GROUP BY clause groups each count result into the two possible values of user['verified'] (true and false).</p>
+                    <p>Now you are ready to proceed with Crate. Good luck!</p>
+                    <h2 id="next-steps">Next Steps</h2>
+                    <ul>
+                        <li>
+                            <a href="https://crate.io/docs/import">Import
+                            Data</a>
+                        </li>
+                        <li>
+                            <a href="https://crate.io/docs/clients">Client
+                            Libraries</a>
+                        </li>
+                        <li>
+                            <a href="https://crate.io/docs/scale">Scale a
+                            Cluster</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-section section">
+        <div class="w-container container">
+            <div class="w-row">
+                <div class="w-col w-col-4">
+                    <a href="https://crate.io/docs/install/local/mac/" id=
+                    "docs-previous">&lt; Previous</a>
+                </div>
+                <div class="w-col w-col-4 align-center">
+                    <a href="https://crate.io/docs/install/local/" id=
+                    "docs-top">Top</a>
+                </div>
+                <div class="w-col w-col-4 align-right">
+                    <a href="https://crate.io/docs/install/local/tarball/" id=
+                    "docs-next">Next &gt;</a>
+                </div>
+            </div>
+        </div>
+    </div><!-- @end content -->
+    <!-- @start wf_footer -->
+    <footer class="w-section footer">
+        <div class="w-container">
+            <div class="w-clearfix">
+                <ul class="w-list-unstyled footer-list">
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://www.facebook.com/crate.io" target=
+                        "_blank"><img src="img/f-logo-facebook.png" width=
+                        "12"></a>
+                    </li>
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://twitter.com/CrateIO" target="_blank"><img src=
+                        "img/f-logo-twitter.png" width="23"></a>
+                    </li>
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://plus.google.com/105753392254543335997" target=
+                        "_blank"><img src="img/f-logo-google.png" width=
+                        "23"></a>
+                    </li>
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://www.linkedin.com/company/crateio" target=
+                        "_blank"><img src="img/f-logo-linkedin.png" width=
+                        "22"></a>
+                    </li>
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://www.youtube.com/channel/UCcp_IqjXaejmwBcwg51n1AA"
+                        target="_blank"><img src="img/f-logo-youtube.png"
+                        width="24"></a>
+                    </li>
+                    <li class="footer-listitem">
+                        <a class="w-inline-block footer-link-connect" href=
+                        "https://github.com/crate"><img src=
+                        "img/f-logo-github.png" width="22"></a>
+                    </li>
+                </ul>
+                <ul class="w-list-unstyled footer-list">
+                    <li class="footer-listitem link-list">
+                        <a class="footer-link" href=
+                        "https://crate.io/about">About</a>
+                    </li>
+                    <li class="footer-listitem link-list">
+                        <a class="footer-link" href=
+                        "https://crate.io/jobs">Jobs</a>
+                    </li>
+                    <li class="footer-listitem link-list">
+                        <a class="footer-link" href=
+                        "https://crate.io/legal">Legal</a>
+                    </li>
+                    <li class="footer-listitem link-list">
+                        <a class="footer-link" href=
+                        "https://crate.io/imprint">Imprint</a>
+                    </li>
+                    <li class="footer-listitem link-list">
+                        <a class="footer-link" href=
+                        "https://crate.io/contact">Contact</a>
+                    </li>
+                </ul><a class="w-inline-block brand footer-brand" href=
+                "https://crate.io/"><img src="img/logo-crate.png" width=
+                "217"></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/webflow.js" type="text/javascript">
+    </script> 
+    <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
+    <script src="js/bootstrap.min.js">
+    </script> 
+    <script src="js/scripts.js">
+    </script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+</body>
+</html>

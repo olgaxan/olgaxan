@@ -1,0 +1,33 @@
+.lang-col {
+  min-height: 200px;
+}
+
+.codehilite > pre {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background: #f0f0f0 none repeat scroll 0 0;
+}
+
+.changeimg {
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}	
+.changeimg img:focus{
+	outline:0;
+}	
+.changeimg img:first-child {
+	display: inline-block;	
+}
+.changeimg img {
+	display: none;
+	cursor:pointer;
+}
+
+ol.mt-minus {
+    margin-top: -15px;   
+}
+.seealso a.inline {
+    display: inline;
+}
